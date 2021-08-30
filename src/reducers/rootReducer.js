@@ -1,3 +1,4 @@
+import { combineReducers } from 'redux';
 import userReducer from './userReducer'
 import stateReducer from './stateReducer'
 import columnReducer from './columnReducer';
