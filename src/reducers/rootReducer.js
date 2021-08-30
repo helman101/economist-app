@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import userReducer from './userReducer'
-import stateReducer from './stateReducer'
+import userReducer from './userReducer';
+import stateReducer from './stateReducer';
 import columnReducer from './columnReducer';
 
 const rootReducer = combineReducers({
@@ -9,4 +9,4 @@ const rootReducer = combineReducers({
   state: stateReducer,
 });
 
-export default rootReducer
+export default rootReducer;

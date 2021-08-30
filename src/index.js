@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import { applyMiddleware, createStore } from 'redux';
-import { store } from './app/store';
 import defaultStore from './store/defaultStore';
 import rootReducer from './reducers/rootReducer';
 
@@ -15,5 +14,5 @@ ReactDOM.render(
       <Routes />
     </Provider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
