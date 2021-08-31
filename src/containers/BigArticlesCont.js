@@ -17,6 +17,4 @@ BigArticlesCont.PropTypes = {
   article: PropTypes.array.isRequired
 }
 
-/*shape({ title: PropTypes.string.isRequired, url: PropTypes.string.isRequired, description: PropTypes.string.isRequired, img_url: PropTypes.string.isRequired }*/ 
-
 export default BigArticlesCont;
