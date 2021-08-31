@@ -10,8 +10,13 @@ const BigArticle = (props) => {
         <img src={article.img_url} atl={article.title} />
       </div>
       <h3>
-        <a href={article.url} />
+        <a href={article.url}>
+          {article.title}
+        </a>
       </h3>
+      <p>
+        {article.description}
+      </p>
     </div>
   );
 };
