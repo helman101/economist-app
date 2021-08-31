@@ -1,21 +1,35 @@
 import React from 'react';
-import { connect } from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import TopColumns from './TopColumns';
+import FooterColumns from './FooterColumns';
 
 const ColumnContainer = (props) => {
   const { columns } = props;
-  const top = columns.splice(0,10); 
+  const top = columns.splice(0, 10);
 
-  return(
+  if (columns) {
+    return (
+      <div>
+        <TopColumns columns={top} />
+        <FooterColumns columns={columns} />
+      </div>
+    );
+  }
+
+  return (
     <div>
-      <TopColumns columns={top} />
-      <FooterColumns columns={columns} />
+      Loading Articles Wait a Second...
     </div>
-  )
-}
+  );
+};
 
-ColumnContainer.PropTypes = {
-  columns: PropTypes.array.isRequired
-}
+ColumnContainer.propTypes = {
+  columns: PropTypes.instanceOf(Array).isRequired,
+};
 
-export default connect()(ColumnContainer);
+const mapStateToProps = (state) => ({
+  columns: state.columns,
+});
+
+export default connect(mapStateToProps)(ColumnContainer);

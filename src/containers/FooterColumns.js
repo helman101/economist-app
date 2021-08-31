@@ -1,20 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import FooterArticlesCont from './FooterArticlesCont';
 
 const FooterColumns = (props) => {
-  const { columns } = props
+  const { columns } = props;
 
   return (
     <div>
-      { columns.map((column) => {
-        <FooterArticlesCont article={column} />
-      }) }
+      { columns.map((column) => (
+        <FooterArticlesCont key={column.id} article={column} />
+      ))}
     </div>
   );
 };
 
-FooterColumns.PropTypes = {
-  article: PropTypes.array.isRequired
-}
+FooterColumns.propTypes = {
+  columns: PropTypes.instanceOf(Array).isRequired,
+};
 
 export default FooterColumns;

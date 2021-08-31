@@ -5,7 +5,7 @@ import columnReducer from './columnReducer';
 
 const rootReducer = combineReducers({
   user: userReducer,
-  column: columnReducer,
+  columns: columnReducer,
   state: stateReducer,
 });
 

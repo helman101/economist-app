@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const LeftImgArticle = (props) => {
-  const { article } = props
+  const { article } = props;
 
   return (
     <div>
@@ -17,14 +17,19 @@ const LeftImgArticle = (props) => {
         </p>
       </div>
       <div>
-        { article.url_img && <img src={article.img_url} atl={article.title} /> }
+        { article.img_url && <img src={article.img_url} alt={article.title} /> }
       </div>
     </div>
   );
 };
 
-LeftImgArticle.PropTypes = {
-  article: PropTypes.shape({ title: PropTypes.string.isRequired, url: PropTypes.string.isRequired, description: PropTypes.string.isRequired, img_url: PropTypes.string.isRequired }).isRequired
-}
+LeftImgArticle.propTypes = {
+  article: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    img_url: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
 export default LeftImgArticle;
