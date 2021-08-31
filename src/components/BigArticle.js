@@ -7,7 +7,7 @@ const BigArticle = (props) => {
   return (
     <div>
       <div>
-        <img src={article.img_url} atl={article.title} />
+        { article.img_url && <img src={article.img_url} atl={article.title} /> } 
       </div>
       <h3>
         <a href={article.url}>

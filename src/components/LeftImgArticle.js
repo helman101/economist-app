@@ -17,7 +17,7 @@ const LeftImgArticle = (props) => {
         </p>
       </div>
       <div>
-        <img src={article.img_url} atl={article.title} />
+        { article.url_img && <img src={article.img_url} atl={article.title} /> }
       </div>
     </div>
   );
