@@ -23,8 +23,8 @@ FooterArticle.propTypes = {
   article: PropTypes.shape({
     title: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    img_url: PropTypes.string.isRequired,
+    description: PropTypes.string,
+    img_url: PropTypes.string,
   }).isRequired,
 };
 
