@@ -5,20 +5,19 @@ import LeftImgArticlesCont from './LeftImgArticlesCont';
 
 const TopColumns = (props) => {
   const { columns } = props;
-  const topThree = columns.splice(0, 3);
 
   return (
     <div>
       <div>
-        <BigArticlesCont articles={topThree[0].articles} />
+        <BigArticlesCont key={columns[0]} articles={columns[0].articles} />
       </div>
       <div>
-        <BigArticlesCont articles={topThree[1].articles} />
+        <BigArticlesCont key={columns[1]} articles={columns[1].articles} />
       </div>
       <div>
-        <LeftImgArticlesCont articles={topThree[2].articles} />
+        <LeftImgArticlesCont key={columns[2]} articles={columns[2].articles} />
       </div>
-      { columns.map((column) => {
+      { columns.slice(3).map((column) => {
         if (Object.keys(column.articles).length === 1) {
           return (<BigArticlesCont key={column.id} articles={column.articles} />);
         }
