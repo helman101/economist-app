@@ -41,11 +41,8 @@ const userCreate = (params) => async (dispatch) => {
 const ColumnsRequest = async (dispatch) => {
   const url = 'http://localhost:3000/columns';
 
-  const result = await fetch(url).then((res) => {
-    console.log(res.json());
-  }).then((res) => {
-    console.log(res);
-  });
+  const result = await fetch(url).then((response) => response.json())
+    .then((res) => res);
 
   dispatch(setColumnsAction(result));
 };
