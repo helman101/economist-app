@@ -3,19 +3,19 @@ import PropTypes from 'prop-types';
 import FooterArticle from '../components/FooterArticle';
 
 const FooterArticlesCont = (props) => {
-  const { column } = props;
+  const { articles } = props;
 
   return (
     <div>
-      { column.articles.map((article) => (
+      { articles.map((article) => (
         <FooterArticle key={article.id} article={article} />
-      )) }
+      ))}
     </div>
   );
 };
 
 FooterArticlesCont.propTypes = {
-  column: PropTypes.instanceOf(Array).isRequired,
+  articles: PropTypes.instanceOf(Array).isRequired,
 };
 
 export default FooterArticlesCont;
