@@ -6,20 +6,11 @@ import FooterColumns from './FooterColumns';
 
 const ColumnContainer = (props) => {
   const { columns } = props;
-  const top = columns.splice(0, 10);
-
-  if (columns) {
-    return (
-      <div>
-        <TopColumns columns={top} />
-        <FooterColumns columns={columns} />
-      </div>
-    );
-  }
 
   return (
     <div>
-      Loading Articles Wait a Second...
+      {columns.length > 0 && <TopColumns columns={columns.slice(0, 9)} />}
+      {columns.length > 0 && <FooterColumns columns={columns.slice(10)} />}
     </div>
   );
 };
