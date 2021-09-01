@@ -6,7 +6,7 @@ const FooterColumns = (props) => {
   const { columns } = props;
 
   return (
-    <div>
+    <div className="d-flex flex-wrap justify-content-between mt-5">
       { columns.map((column) => (
         <FooterArticlesCont key={column.id} articles={column.articles} />
       ))}

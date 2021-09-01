@@ -6,17 +6,17 @@ const BigArticle = (props) => {
 
   return (
     <div className={`${w ? 'big-article' : 'small-article'} mt-3 mb-5`}>
-      <div>
-        { article.img_url && <img className="w-100" src={article.img_url} alt={article.title} /> }
-      </div>
-      <h3 className="my-3">
-        <a href={article.url}>
+      <a href={article.url}>
+        <div>
+          { article.img_url && <img className="w-100" src={article.img_url} alt={article.title} /> }
+        </div>
+        <h3 className="my-3">
           {article.title}
-        </a>
-      </h3>
-      <p>
-        {article.description}
-      </p>
+        </h3>
+        <p>
+          {article.description}
+        </p>
+      </a>
     </div>
   );
 };

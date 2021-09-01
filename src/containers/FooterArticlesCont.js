@@ -6,7 +6,7 @@ const FooterArticlesCont = (props) => {
   const { articles } = props;
 
   return (
-    <div>
+    <div className="w-23 border-top border-secondary pt-3">
       { articles.map((article) => (
         <FooterArticle key={article.id} article={article} />
       ))}

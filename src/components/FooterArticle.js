@@ -5,16 +5,13 @@ const FooterArticle = (props) => {
   const { article } = props;
 
   return (
-    <div>
-      { article.img_url && <div><img src={article.img_url} alt={article.title} /></div> }
-      <h3>
-        <a href={article.url}>
+    <div className={`${!article.img_url && 'border-top'} footer-article p-2`}>
+      <a href={article.url}>
+        { article.img_url && <div><img className="w-100" src={article.img_url} alt={article.title} /></div> }
+        <h3 className="pt-3">
           {article.title}
-        </a>
-      </h3>
-      <p>
-        {article.description}
-      </p>
+        </h3>
+      </a>
     </div>
   );
 };

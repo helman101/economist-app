@@ -10,7 +10,7 @@ const ColumnContainer = (props) => {
   return (
     <div className="container">
       {columns.length > 0 && <TopColumns columns={columns.slice(0, 9)} />}
-      {columns.length > 0 && <FooterColumns columns={columns.slice(10)} />}
+      {columns.length > 0 && <FooterColumns columns={columns.slice(9)} />}
     </div>
   );
 };
