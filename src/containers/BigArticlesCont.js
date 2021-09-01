@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import BigArticle from '../components/BigArticle';
 
 const BigArticlesCont = (props) => {
-  const { articles } = props;
+  const { articles, w } = props;
 
   return (
-    <div>
+    <div className={`${w ? 'w-100' : 'w-50'} px-3 py-2 border-top border-dark`}>
       { articles.map((article) => (
-        <BigArticle key={article.id} article={article} />
+        <BigArticle w={w} key={article.id} article={article} />
       )) }
     </div>
   );
@@ -16,6 +16,7 @@ const BigArticlesCont = (props) => {
 
 BigArticlesCont.propTypes = {
   articles: PropTypes.instanceOf(Array).isRequired,
+  w: PropTypes.bool.isRequired,
 };
 
 export default BigArticlesCont;

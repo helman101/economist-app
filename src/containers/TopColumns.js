@@ -9,20 +9,20 @@ const TopColumns = (props) => {
   return (
     <div>
       <div>
-        <BigArticlesCont key={columns[0]} articles={columns[0].articles} />
+        <BigArticlesCont key={columns[0]} w={1} articles={columns[0].articles} />
       </div>
-      <div>
+      <div className="d-flex flex-wrap">
         <BigArticlesCont key={columns[1]} articles={columns[1].articles} />
-      </div>
-      <div>
         <LeftImgArticlesCont key={columns[2]} articles={columns[2].articles} />
       </div>
-      { columns.slice(3).map((column) => {
-        if (Object.keys(column.articles).length === 1) {
-          return (<BigArticlesCont key={column.id} articles={column.articles} />);
-        }
-        return (<LeftImgArticlesCont key={column.id} articles={column.articles} />);
-      }) }
+      <div className="d-flex flex-wrap">
+        { columns.slice(3).map((column) => {
+          if (Object.keys(column.articles).length === 1) {
+            return (<BigArticlesCont key={column.id} articles={column.articles} />);
+          }
+          return (<LeftImgArticlesCont key={column.id} articles={column.articles} />);
+        }) }
+      </div>
     </div>
   );
 };

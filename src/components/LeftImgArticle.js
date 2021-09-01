@@ -5,8 +5,8 @@ const LeftImgArticle = (props) => {
   const { article } = props;
 
   return (
-    <div>
-      <div>
+    <div className="small-article p-3 d-flex justify-content-between">
+      <div className={`${article.img_url ? 'w-70' : 'w-100'}`}>
         <h3>
           <a href={article.url}>
             {article.title}
@@ -16,9 +16,12 @@ const LeftImgArticle = (props) => {
           {article.description}
         </p>
       </div>
-      <div>
-        { article.img_url && <img src={article.img_url} alt={article.title} /> }
-      </div>
+
+      { article.img_url && (
+        <div className="w-33 h-100 position-relative">
+          <img className="w-100" src={article.img_url} alt={article.title} />
+        </div>
+      )}
     </div>
   );
 };

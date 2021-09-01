@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import { applyMiddleware, createStore } from 'redux';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import defaultStore from './store/defaultStore';
 import rootReducer from './reducers/rootReducer';
 import { ColumnsRequest } from './API/apiRequests';
 import ColumnContainer from './containers/ColumnContainer';
+import './assets/stylesheets/index.css';
 
 const store = createStore(rootReducer, defaultStore, applyMiddleware(thunk));
 

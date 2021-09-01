@@ -6,7 +6,7 @@ const LeftImgArticlesCont = (props) => {
   const { articles } = props;
 
   return (
-    <div>
+    <div className="w-50 border-top px-3 border-dark">
       { articles.map((article) => (
         <LeftImgArticle key={article.id} article={article} />
       ))}
