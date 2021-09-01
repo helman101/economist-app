@@ -8,7 +8,7 @@ const FooterColumns = (props) => {
   return (
     <div>
       { columns.map((column) => (
-        <FooterArticlesCont key={column.id} article={column} />
+        <FooterArticlesCont key={column.id} articles={column.articles} />
       ))}
     </div>
   );
