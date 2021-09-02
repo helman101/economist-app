@@ -12,7 +12,18 @@ const userRequest = (params, push) => async (dispatch) => {
   url.search = new URLSearchParams(params).toString();
 
   const result = await fetch(url)
-    .then((res) => res.json());
+    .then((res) => res.json())
+    .catch(() => (
+      toast.error('Imposible to reach the server', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'colored',
+      })));
 
   if (result.name) {
     dispatch(logUserInAction(result));
@@ -52,7 +63,17 @@ const userCreate = (params, push) => async () => {
     headers,
     body: JSON.stringify(params),
   })
-    .then((res) => res.json());
+    .then((res) => res.json()).catch(() => (
+      toast.error('Imposible to reach the server', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'colored',
+      })));
 
   if (result.name) {
     toast.success('Sign up successful', {
