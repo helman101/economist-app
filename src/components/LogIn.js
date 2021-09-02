@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import 'react-router-dom';
 import { toast } from 'react-toastify';
 import { userRequest } from '../API/apiRequests';
 
@@ -45,7 +45,7 @@ const LogIn = (props) => {
         <form className="d-flex flex-column">
           <input type="email" id="email" name="email" placeholder="Email" onChange={handleChange} className="my-1 form-control" />
           <input type="password" id="password" name="password" placeholder="Password" onChange={handleChange} className="my-1 form-control" />
-          <Link to="/SignUp" className="mt-2 mb-3 text-center link-danger">New here? Join Us!</Link>
+          <a href="/SignUp" className="mt-2 mb-3 text-center link-danger">New here? Join Us!</a>
           <button type="submit" onClick={handleSubmit} className="btn btn-danger text-white fw-bold">SUBMIT</button>
         </form>
       </div>

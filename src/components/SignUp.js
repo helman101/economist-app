@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import 'react-router-dom';
 import { toast } from 'react-toastify';
 import { userCreate } from '../API/apiRequests';
 
@@ -66,7 +66,7 @@ const SignUp = (props) => {
           <input type="email" id="email" name="email" placeholder="Email" onChange={handleChange} className="my-1 form-control" />
           <input type="password" id="password" name="password" placeholder="Password" onChange={handleChange} className="my-1 form-control" />
           <input type="password" id="passwordConfirm" name="passwordConfirm" placeholder="Confirm Password" onChange={handleChange} className="my-1 form-control" />
-          <Link to="/" className="mt-2 mb-3 text-center link-danger">Have an account? Log in!</Link>
+          <a href="/" className="mt-2 mb-3 text-center link-danger">Have an account? Log in!</a>
           <button type="submit" onClick={handleSubmit} className="btn btn-danger text-white fw-bold">SUBMIT</button>
         </form>
       </div>
