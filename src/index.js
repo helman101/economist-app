@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import defaultStore from './store/defaultStore';
 import rootReducer from './reducers/rootReducer';
 import { ColumnsRequest } from './API/apiRequests';
-import ColumnContainer from './containers/ColumnContainer';
+import Routes from './routes/Routes';
 import './assets/stylesheets/index.css';
 
 const store = createStore(rootReducer, defaultStore, applyMiddleware(thunk));
@@ -17,7 +17,7 @@ store.dispatch(ColumnsRequest);
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <ColumnContainer />
+      <Routes />
     </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
