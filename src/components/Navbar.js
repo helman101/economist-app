@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { logUserOutAction } from '../actions/userActions';
 
@@ -20,7 +19,7 @@ const Navbar = (props) => {
         </div>
       </div>
       <div className="me-3">
-        <Link to="/" className="btn btn-danger" type="button" onClick={handleLogOut}>LOG OUT</Link>
+        <a href="/" className="btn btn-danger" type="button" onClick={handleLogOut}>LOG OUT</a>
       </div>
     </nav>
   );
