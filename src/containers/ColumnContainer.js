@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import TopColumns from './TopColumns';
 import FooterColumns from './FooterColumns';
+import Navbar from '../components/Navbar';
 
 const ColumnContainer = (props) => {
   const { columns, user } = props;
@@ -26,6 +27,7 @@ const ColumnContainer = (props) => {
 
   return (
     <div className="container">
+      <Navbar />
       {columns.length > 0 && <TopColumns columns={columns.slice(0, 9)} />}
       {columns.length > 0 && <FooterColumns columns={columns.slice(9)} />}
     </div>
