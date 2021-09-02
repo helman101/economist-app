@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignUp should render propertly 1`] = `
+<div
+  className="session d-flex justify-content-center align-items-center"
+>
+  <div
+    className="form p-2"
+  >
+    <div
+      className="title mb-4"
+    >
+      SignUp
+    </div>
+    <form
+      className="d-flex flex-column"
+    >
+      <input
+        className="my-1 form-control"
+        id="name"
+        name="name"
+        onChange={[Function]}
+        placeholder="Name"
+        type="text"
+      />
+      <input
+        className="my-1 form-control"
+        id="email"
+        name="email"
+        onChange={[Function]}
+        placeholder="Email"
+        type="email"
+      />
+      <input
+        className="my-1 form-control"
+        id="password"
+        name="password"
+        onChange={[Function]}
+        placeholder="Password"
+        type="password"
+      />
+      <input
+        className="my-1 form-control"
+        id="passwordConfirm"
+        name="passwordConfirm"
+        onChange={[Function]}
+        placeholder="Confirm Password"
+        type="password"
+      />
+      <a
+        className="mt-2 mb-3 text-center link-danger"
+        href="/"
+      >
+        Have an account? Log in!
+      </a>
+      <button
+        className="btn btn-danger text-white fw-bold"
+        onClick={[Function]}
+        type="submit"
+      >
+        SUBMIT
+      </button>
+    </form>
+  </div>
+</div>
+`;
