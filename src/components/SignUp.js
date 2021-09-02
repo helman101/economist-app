@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { userCreate } from '../API/apiRequests';
 
 const SignUp = (props) => {
@@ -34,13 +35,26 @@ const SignUp = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const params = {
-      name: userName,
-      email: userEmail,
-      password: userPassword,
-      password_confirmation: userPConfirm,
-    };
-    props.dispatch(userCreate(params, props.history.push));
+    if (userEmail === '' || userPassword === '' || userName === '' || userPConfirm === '') {
+      toast.error('No field can be blank', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'colored',
+      });
+    } else {
+      const params = {
+        email: userEmail,
+        name: userName,
+        password: userPassword,
+        password_confirmation: userPConfirm,
+      };
+      props.dispatch(userCreate(params, props.history.push));
+    }
   };
 
   return (
