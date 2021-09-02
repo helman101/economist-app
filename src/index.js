@@ -8,6 +8,7 @@ import defaultStore from './store/defaultStore';
 import rootReducer from './reducers/rootReducer';
 import { ColumnsRequest } from './API/apiRequests';
 import Routes from './routes/Routes';
+import 'react-toastify/dist/ReactToastify.css';
 import './assets/stylesheets/index.css';
 
 const store = createStore(rootReducer, defaultStore, applyMiddleware(thunk));
