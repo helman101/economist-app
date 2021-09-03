@@ -42,11 +42,11 @@
 }
 
 .w-70 {
-  width: 70%
+  width: 70%;
 }
 
 .w-23 {
-  width: 23%
+  width: 23%;
 }
 
 .container a {
@@ -55,7 +55,6 @@
 
 .container a * {
   color: black;
-  text-decoration: none;
   text-underline-offset: 2px;
   position: relative;
   text-decoration: none;
