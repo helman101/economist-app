@@ -26,7 +26,6 @@ const Navbar = (props) => {
 };
 
 Navbar.propTypes = {
-  history: PropTypes.shape({ push: PropTypes.func.isRequired }).isRequired,
   dispatch: PropTypes.func.isRequired,
 };
 
