@@ -1,9 +1,9 @@
-import BigArticle from '../components/BigArticle';
 import React from 'react';
 import { shallow, configure } from 'enzyme';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+import BigArticle from '../components/BigArticle';
 
-configure({ adapter: new Adapter() })
+configure({ adapter: new Adapter() });
 
 describe('BigArticle', () => {
   it('Should render all elements with data', () => {
@@ -13,12 +13,12 @@ describe('BigArticle', () => {
       priority: 1,
       title: 'Test',
       description: 'Test description',
-    }
-  
+    };
+
     const wrapper = shallow(
-      <BigArticle w={true} article={article} />
+      <BigArticle w article={article} />,
     );
-  
+
     expect(wrapper.find('h3').text()).toBe(article.title);
     expect(wrapper.find('img')).toHaveLength(1);
     expect(wrapper.find('img')).toHaveLength(1);
@@ -32,12 +32,12 @@ describe('BigArticle', () => {
       priority: 1,
       title: 'Test',
       description: null,
-    }
-  
+    };
+
     const wrapper = shallow(
-      <BigArticle w={true} article={article} />
+      <BigArticle w article={article} />,
     );
 
     expect(wrapper.find('img')).toHaveLength(0);
   });
-})
+});

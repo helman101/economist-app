@@ -1,9 +1,9 @@
-import FooterArticle from '../components/FooterArticle';
 import React from 'react';
 import { shallow, configure } from 'enzyme';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+import FooterArticle from '../components/FooterArticle';
 
-configure({ adapter: new Adapter() })
+configure({ adapter: new Adapter() });
 
 describe('FooterArticle', () => {
   it('Should render all elements with data', () => {
@@ -13,12 +13,12 @@ describe('FooterArticle', () => {
       priority: 1,
       title: 'Test',
       description: null,
-    }
-  
+    };
+
     const wrapper = shallow(
-      <FooterArticle article={article} />
+      <FooterArticle article={article} />,
     );
-  
+
     expect(wrapper.find('h3').text()).toBe(article.title);
     expect(wrapper.find('img')).toHaveLength(1);
   });
@@ -30,12 +30,12 @@ describe('FooterArticle', () => {
       priority: 1,
       title: 'Test',
       description: null,
-    }
-  
+    };
+
     const wrapper = shallow(
-      <FooterArticle article={article} />
+      <FooterArticle article={article} />,
     );
 
     expect(wrapper.find('img')).toHaveLength(0);
   });
-})
+});
