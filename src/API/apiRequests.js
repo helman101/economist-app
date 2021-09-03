@@ -8,7 +8,7 @@ const headers = {
 };
 
 const userRequest = (params, push) => async (dispatch) => {
-  const url = new URL('http://localhost:3000/auth');
+  const url = new URL('https://thawing-wave-53385.herokuapp.com/auth');
   url.search = new URLSearchParams(params).toString();
 
   const result = await fetch(url)
@@ -56,7 +56,7 @@ const userRequest = (params, push) => async (dispatch) => {
 };
 
 const userCreate = (params, push) => async () => {
-  const url = 'http://localhost:3000/users';
+  const url = 'https://thawing-wave-53385.herokuapp.com/users';
 
   const result = await fetch(url, {
     method: 'post',
@@ -104,7 +104,7 @@ const userCreate = (params, push) => async () => {
 };
 
 const ColumnsRequest = async (dispatch) => {
-  const url = 'http://localhost:3000/columns';
+  const url = 'https://thawing-wave-53385.herokuapp.com/columns';
 
   const result = await fetch(url).then((response) => response.json())
     .then((res) => res);
