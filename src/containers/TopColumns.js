@@ -9,11 +9,11 @@ const TopColumns = (props) => {
   return (
     <div>
       <div>
-        <BigArticlesCont key={columns[0]} w={1} articles={columns[0].articles} />
+        <BigArticlesCont key={columns[0].id} w articles={columns[0].articles} />
       </div>
       <div className="d-flex flex-wrap">
-        <BigArticlesCont key={columns[1]} articles={columns[1].articles} />
-        <LeftImgArticlesCont key={columns[2]} articles={columns[2].articles} />
+        <BigArticlesCont key={columns[1].id} articles={columns[1].articles} />
+        <LeftImgArticlesCont key={columns[2].id} articles={columns[2].articles} />
       </div>
       <div className="d-flex flex-wrap">
         { columns.slice(3).map((column) => {
