@@ -22,7 +22,7 @@ const App = () => (
     <div>
       <Route exact path="/" component={LogIn} />
       <Route path="/Home" component={ColumnContainer} />
-      <Route path="/SignUp" component={SignUp} />
+      <Route path="/Signup" component={SignUp} />
     </div>
   </div>
 );
