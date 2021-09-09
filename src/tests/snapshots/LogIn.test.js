@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
 import configureStore from 'redux-mock-store';
 import { createMemoryHistory } from 'history';
+import { MemoryRouter } from 'react-router';
 import defaultState from '../../store/defaultStore';
 import LogIn from '../../components/LogIn';
 
@@ -18,7 +19,9 @@ describe('LogIn', () => {
     store = mockStore(defaultState);
     component = renderer.create(
       <Provider store={store}>
-        <LogIn history={history} />
+        <MemoryRouter>
+          <LogIn history={history} />
+        </MemoryRouter>
       </Provider>,
     );
   });
